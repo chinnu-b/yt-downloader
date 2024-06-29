@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 const port = 3000;
 
+app.get('/', (req, res) => {
+    res.send('Yt downloader is up and running');
+});
+
 
 app.get('/download', async (req, res) => {
     const url = req.query.url;
